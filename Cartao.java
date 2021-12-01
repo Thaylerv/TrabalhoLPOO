@@ -3,12 +3,16 @@ public class Cartao {
     private float limite;
     private int diaFechaFatua;
     private boolean monitorado;
-
+    
     Cartao(String banco, float limite, int diaFechaFatua) {
         this.banco = banco;
         this.limite = limite;
         this.diaFechaFatua = diaFechaFatua;
         this.monitorado = true;
+    }
+    
+    Cartao(String banco) {
+        this.banco = banco;
     }
 
     public boolean isMonitorado() {

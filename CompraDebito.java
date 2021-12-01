@@ -14,7 +14,7 @@ public class CompraDebito extends Compra {
 
     // métodos especiais
     public String toString() {
-        return "CompraDebito [cartao=" + cartao + "]";
+        return super.toString() + "CompraDebito [cartao=" + cartao + "]";
     }
 
 }

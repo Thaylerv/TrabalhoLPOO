@@ -18,15 +18,10 @@ public class Mes {
 
     // atributos abstratos
 
-    protected CompraCredito cc;
-    protected CompraDebito cd;
-
-    public Mes(int idxMes, int ano, float saldoInicial, CompraDebito c1, CompraCredito c2) {
+    public Mes(int idxMes, int ano, float saldoInicial) {
         this.idxMes = idxMes;
         this.ano = ano;
-        this.saldoInicial = saldoInicial;
-        this.cd = c1;
-        this.cc = c2;
+        this.saldoInicial = saldoInicial;        
         this.setNome();
         this.setTotalSaida();
     }
@@ -82,8 +77,12 @@ public class Mes {
 
     public void setTotalSaida() {
         // totalSaida = compraDebito + compraCredito
-        float totalSaida = cd.getValor() + cc.getValor();
-        this.totalSaida = totalSaida;
+        float soma = 0;
+        for (int i = 0; i < Compra.listaCompras.size(); i++) {
+            soma = soma + Compra.listaCompras.get(i).getValor();
+            
+        }
+        this.totalSaida = soma;
     }
 
     public float getSaldoFinal() {
