@@ -1,5 +1,3 @@
-
-
 public class GerenciadorFinanceiro {
     public static void main(String[] args) {
         // criando objetos relacionados ao cartão com sobrecarga de construtor
@@ -19,21 +17,17 @@ public class GerenciadorFinanceiro {
 
         CompraCreditoAVista c7 = new CompraCreditoAVista("aluguel", 12112021, 1000);
         CompraCreditoAVista c8 = new CompraCreditoAVista("peça para bike", 12112021, 45.5f);
+        
 
         
 
 
         // print no terminal com toString herdada da superclasse
         System.out.println("Todas as compras");
-        System.out.println(c1.toString());
-        System.out.println(c2.toString());
-        System.out.println(c3.toString());
-        System.out.println(c4.toString());
-        System.out.println(c5.toString());
-        System.out.println(c6.toString());
-        System.out.println(c7.toString());
-        System.out.println(c8.toString());
-
+        for (int i = 0; i < Compra.listaCompras.size(); i++) {          
+           System.out.println(Compra.listaCompras.get(i));            
+        }
+        
         // instanciando mes
         Mes nov2021 = new Mes(11, 2021, 10);
         System.out.println(nov2021.toString());

@@ -1,21 +1,22 @@
-public class CompraCreditoParcelado extends Compra {
+public class CompraCreditoParcelado extends CompraCredito {
     // Atributos
-    Cartao cartao;
-    int mesFatura;
-    int nVezes;
+    private int nVezes;
 
     // Construtor
     CompraCreditoParcelado(String idCompra, int data, float valor, Cartao cartao, int mesFatura, int nVezes) {
-        super(idCompra, data, valor);
-        this.cartao = cartao;
-        this.mesFatura = mesFatura;
+        super(idCompra, data, valor, cartao, mesFatura);
         this.nVezes = nVezes;
     }
     // Métodos
 
     // Métodos especiais
     public String toString() {
-        return super.toString() + "CompraCreditoParcelado [idCartao=" + cartao + ", mesFatura=" + mesFatura + ", nVezes=" + nVezes + "]";
+        return super.toString() + "CompraCreditoParcelado [nVezes=" + nVezes + "]";
+    }
+
+    @Override
+    public float getValor() {
+        return valor;
     }
 
 }

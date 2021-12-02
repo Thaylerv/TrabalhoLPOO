@@ -2,8 +2,7 @@ public abstract class CompraCredito extends Compra {
 
     // Atributos
     private Cartao cartao;
-    private int mesFatura;
-
+    private int mesFatura;    
     // Construtor
     
     CompraCredito(String idCompra, int data, float valor, Cartao cartao, int mesFatura) {
@@ -14,9 +13,14 @@ public abstract class CompraCredito extends Compra {
 
     // Métodos
 
+    public CompraCredito(String idCompra, int data, float valor) {
+        super(idCompra, data, valor);
+        
+    }
+
     // Métodos especiais
     public String toString() {
-        return super.toString() + "CompraCredito [idCartao=" + cartao.getBanco() + ", mesFatura=" + mesFatura + "]";
+        return super.toString() + "CompraCredito [cartao=" + cartao.getBanco() + ", mesFatura=" + mesFatura + "]";
     }
 
     public int getMesFatura() {
@@ -33,6 +37,8 @@ public abstract class CompraCredito extends Compra {
 
     public void setCartao(Cartao cartao) {
         this.cartao = cartao;
-    }
+    } 
+    
+    public abstract float getValor();
 
 }

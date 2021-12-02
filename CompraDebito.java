@@ -1,7 +1,7 @@
 public class CompraDebito extends Compra {
 
     // Atributos
-    Cartao cartao;;
+    private Cartao cartao;;
 
     // Construtor
     CompraDebito(String idCompra, int data, float valor, Cartao cartao) {
@@ -14,7 +14,7 @@ public class CompraDebito extends Compra {
 
     // métodos especiais
     public String toString() {
-        return super.toString() + "CompraDebito [cartao=" + cartao + "]";
+        return super.toString() + "CompraDebito [cartao=" + cartao.getBanco() + "]";
     }
 
 }

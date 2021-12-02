@@ -3,9 +3,9 @@ import java.util.ArrayList;
 public abstract class Compra {
 
     // atributos
-    private String idCompra;
-    private int data; // ddmmaaaa
-    private float valor;
+    protected String idCompra;
+    protected int data; // ddmmaaaa
+    protected float valor;
 
     public static ArrayList<Compra> listaCompras = new ArrayList<>();
     
